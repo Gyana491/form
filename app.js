@@ -13,6 +13,7 @@ const connectDB = async () => {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
+        console.log('MongoDB connection successful');
         
     } catch (error) {
         console.error('MongoDB connection failed:', error);
@@ -23,6 +24,7 @@ const connectDB = async () => {
 
 connectDB();
 
+//Middleware to convert to json
 app.use(express.json());
 
 // Add the API routes
