@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Sample Form</h2>
+        <form id="sampleForm" onsubmit="handleSubmit(event)">
+            <!-- Text Input -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="text-input">
+                    Text Input
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="text-input" type="text" placeholder="Enter text">
+            </div>
+
+            <!-- Email Input -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email-input">
+                    Email Input
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email-input" type="email" placeholder="Enter email">
+            </div>
+
+            <!-- Password Input -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="password-input">
+                    Password Input
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password-input" type="password" placeholder="Enter password">
+            </div>
+
+            <!-- Number Input -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="number-input">
+                    Number Input
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="number-input" type="number" placeholder="Enter number">
+            </div>
+
+            <!-- Date Input -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="date-input">
+                    Date Input
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date-input" type="date">
+            </div>
+
+            <!-- Time Input -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="time-input">
+                    Time Input
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="time-input" type="time">
+            </div>
+
+            <!-- Textarea -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="textarea">
+                    Textarea
+                </label>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="textarea" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+
+            <!-- Select Dropdown -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="select">
+                    Select Dropdown
+                </label>
+                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="select">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="mb-4">
+                <label class="flex items-center">
+                    <input class="form-checkbox h-5 w-5 text-blue-600" type="checkbox">
+                    <span class="ml-2 text-gray-700">Checkbox</span>
+                </label>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Radio Buttons
+                </label>
+                <div class="flex items-center">
+                    <label class="flex items-center mr-4">
+                        <input class="form-radio h-5 w-5 text-blue-600" type="radio" name="radio" value="option1">
+                        <span class="ml-2 text-gray-700">Option 1</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input class="form-radio h-5 w-5 text-blue-600" type="radio" name="radio" value="option2">
+                        <span class="ml-2 text-gray-700">Option 2</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- File Input -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="file-input">
+                    File Input
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="file-input" type="file">
+            </div>
+
+            <!-- Range Input -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="range-input">
+                    Range Input
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="range-input" type="range" min="0" max="100">
+            </div>
+
+            <!-- Color Input -->
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="color-input">
+                    Color Input
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="color-input" type="color">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+        
+        <!-- Results Display Section -->
+        <div id="formResults" class="mt-8 hidden">
+            <h3 class="text-xl font-bold mb-4">Submitted Data:</h3>
+            <div id="resultsContent" class="bg-gray-50 p-4 rounded-lg"></div>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            let results = '';
+
+            // Collect all form values
+            for (const [key, value] of formData.entries()) {
+                results += `<div class="mb-2">
+                    <span class="font-semibold">${key}: </span>
+                    <span class="text-gray-700">${value}</span>
+                </div>`;
+            }
+
+            // Handle checkbox values
+            const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                results += `<div class="mb-2">
+                    <span class="font-semibold">${checkbox.nextElementSibling.textContent}: </span>
+                    <span class="text-gray-700">${checkbox.checked ? 'Checked' : 'Unchecked'}</span>
+                </div>`;
+            });
+
+            // Handle color input
+            const colorInput = form.querySelector('input[type="color"]');
+            results += `<div class="mb-2">
+                <span class="font-semibold">Color: </span>
+                <span class="text-gray-700">${colorInput.value}</span>
+                <span class="ml-2 inline-block w-6 h-6 rounded" style="background-color: ${colorInput.value}"></span>
+            </div>`;
+
+            // Handle range input
+            const rangeInput = form.querySelector('input[type="range"]');
+            results += `<div class="mb-2">
+                <span class="font-semibold">Range: </span>
+                <span class="text-gray-700">${rangeInput.value}</span>
+            </div>`;
+
+            // Display results
+            document.getElementById('resultsContent').innerHTML = results;
+            document.getElementById('formResults').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
